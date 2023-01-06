@@ -16,3 +16,16 @@ test_that("TestR6 Methods can be evaluated", {
   t1$show()
   print(t1$print2())
 })
+
+test_that("TestR6 static methods can be evaluated", {
+  t1 <- TestR6$factory(1) #nolint
+  
+  t1$show()
+  print(t1$print2())
+
+  t2 <- TestR6$factory(2) #nolint
+  
+  t2$show()
+  print(t2$print2())
+  
+})
